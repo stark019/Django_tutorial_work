@@ -15,7 +15,7 @@ def users(request):
         form = NewUserForm(request.POST) 
         if form.is_valid():
             form.save(commit=True)
-            return index(request)
+            #return users(request)
         else:
             print("ERROR invalid form")
     return render(request,'appTwo/users.html',{'form' : form,'users':user_list})
